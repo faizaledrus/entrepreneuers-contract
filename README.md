@@ -1,18 +1,15 @@
-# Hello Open Zeppelin Upgradeable Contracts
+# Basic Sample Hardhat Project
 
--   [x] simple upgrade (deploy, verify, verify proxy, upgrade)
--   [ ] unsafe (constructor, initialize more than once, reorder storage, kill)
--   [ ] ERC20 upgrade
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+
+Try running some of the following tasks:
 
 ```shell
+npx hardhat accounts
 npx hardhat compile
-
-# 3 transactions (deploy V1, ProxyAdmin and proxy)
-env $(cat .env) npx hardhat run --network ropsten scripts/deploy_box_v1.js
-# 2 transactions (deploy V2, ProxyAdmin.upgrade)
-env $(cat .env) npx hardhat run --network ropsten scripts/upgrade_box_v2.js
-
-IMP=0x892f0dF05f993A7050F0e2DFC865b170776d3759
-IMP=0xd0e76D0ea91f25Ce0Ad3e48e3CeD94d98806Fe6d
-env $(cat .env) npx hardhat verify --network ropsten $IMP
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+node scripts/sample-script.js
+npx hardhat help
 ```

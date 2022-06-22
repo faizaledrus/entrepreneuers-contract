@@ -1,12 +1,14 @@
+// require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-ethers");
-require("@openzeppelin/hardhat-upgrades");
-require("@nomiclabs/hardhat-etherscan");
+require("@openzeppelin/hardhat-upgrades")
+require("@nomiclabs/hardhat-etherscan")
 
+console.log(process.env.INFURA_API_KEY,process.env.PRI_KEY)
 module.exports = {
   solidity: "0.8.10",
   networks: {
-    ropsten: {
-      url: `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`,
+    rinkeby: {
+      url: `https://rinkeby.infura.io/v3/${process.env.INFURA_API_KEY}`,
       accounts: [process.env.PRI_KEY],
     },
   },
