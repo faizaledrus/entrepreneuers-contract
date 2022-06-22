@@ -3,7 +3,7 @@ require("@nomiclabs/hardhat-ethers");
 require("@openzeppelin/hardhat-upgrades")
 require("@nomiclabs/hardhat-etherscan")
 
-console.log(process.env.INFURA_API_KEY,process.env.PRI_KEY)
+// console.log(process.env.INFURA_API_KEY,process.env.PRI_KEY)
 module.exports = {
   solidity: "0.8.10",
   networks: {
