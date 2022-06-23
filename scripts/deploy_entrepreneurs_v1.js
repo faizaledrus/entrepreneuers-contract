@@ -8,7 +8,7 @@ async function main() {
         initializer: "initialize",
     });
     await entrepreneurs.deployed();
-    console.log("Azuko deployed to:", entrepreneurs.address);
+    console.log("Entrepreneurs deployed to:", entrepreneurs.address);
 }
 
 main();
