@@ -5,17 +5,13 @@ import 'erc721a-upgradeable/contracts/ERC721AUpgradeable.sol';
 import '@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol';
 import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
 
-contract EntrepreneursV2 is ERC721AUpgradeable, PausableUpgradeable, OwnableUpgradeable {
+contract EntrepreneursV3 is ERC721AUpgradeable, PausableUpgradeable, OwnableUpgradeable {
 
 	uint public price;
 	uint public maxSupply;
 	uint public maxMinting;
 	uint256 public mintPrice; //0.08 ETH
 
-
-    // Take note of the initializer modifiers.
-    // - `initializerERC721A` for `ERC721AUpgradeable`.
-    // - `initializer` for OpenZeppelin's `OwnableUpgradeable`.
     function initialize() initializerERC721A initializer public {
         __ERC721A_init('Entrepreneurs', 'ENTR');
         __Ownable_init();
